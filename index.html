@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sadaq Taxi — Подключение водителей</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
+header {
+  background: #FFD400;
+  padding: 20px;
+  text-align: center;
+}
+header img {
+  height: 110px;
+  max-width: 90%;
+}
+.hero {
+  background: #FFD400;
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  font-weight: bold;
+}
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+.section h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #f5f5f5;
+  padding: 25px;
+  border-radius: 14px;
+  font-size: 18px;
+}
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.form input {
+  width: 90%;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+.lang {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.lang button {
+  margin-left: 5px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header img { height: 80px; }
+  .hero h1 { font-size: 26px; }
+  .hero p { font-size: 18px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="lang">
+  <button onclick="setLang('ru')">RU</button>
+  <button onclick="setLang('kz')">KZ</button>
+</div>
+
+<header>
+  <img src="logo.png" alt="Sadaq Taxi">
+</header>
+
+<section class="hero">
+  <h1 data-ru="Работай водителем с Sadaq Taxi и зарабатывай больше"
+      data-kz="Sadaq Taxi-пен жүргізуші болып жұмыс істеп, көбірек табыс тап">
+      Работай водителем с Sadaq Taxi и зарабатывай больше
+  </h1>
+  <p data-ru="Подключение водителей по всему Казахстану"
+     data-kz="Қазақстан бойынша жүргізушілерді қосу">
+     Подключение водителей по всему Казахстану
+  </p>
+
+  <a class="btn" href="#form" data-ru="Стать водителем" data-kz="Жүргізуші болу">Стать водителем</a>
+  <a class="btn" href="https://wa.me/77075111104" target="_blank">WhatsApp</a>
+  <a class="btn" href="https://sadaqtaxi.netlify.app/" target="_blank">Kaspi QR</a>
+</section>
+
+<section class="section">
+  <h2 data-ru="Преимущества Sadaq Taxi" data-kz="Sadaq Taxi артықшылықтары">Преимущества Sadaq Taxi</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">💸</div>
+      <div data-ru="Моментальные выплаты" data-kz="Жедел төлемдер">Моментальные выплаты</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛎</div>
+      <div data-ru="Поддержка 24/7" data-kz="24/7 қолдау">Поддержка 24/7</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎁</div>
+      <div data-ru="Бонусы водителям" data-kz="Жүргізушілерге бонустар">Бонусы водителям</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">⚡</div>
+      <div data-ru="Подключение онлайн за 5 минут" data-kz="5 минутта онлайн қосылу">
+        Подключение онлайн за 5 минут
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 data-ru="Требования к водителям" data-kz="Жүргізушілерге талаптар">Требования к водителям</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">🪪</div>
+      <div data-ru="Водительское удостоверение" data-kz="Жүргізуші куәлігі">
+        Водительское удостоверение
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚗</div>
+      <div data-ru="Техпаспорт автомобиля" data-kz="Көлік техпаспорты">
+        Техпаспорт автомобиля
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <div data-ru="Смартфон" data-kz="Смартфон">Смартфон</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">📍</div>
+      <div data-ru="Любой город Казахстана" data-kz="Қазақстанның кез келген қаласы">
+        Любой город Казахстана
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="form">
+  <h2 data-ru="Оставить заявку" data-kz="Өтінім қалдыру">Оставить заявку</h2>
+  <div class="form">
+    <input type="text" id="name" placeholder="Имя">
+    <input type="tel" id="phone" placeholder="Телефон">
+    <input type="text" id="city" placeholder="Город">
+    <br>
+    <button class="btn" onclick="sendWhatsApp()">Отправить в WhatsApp</button>
+  </div>
+</section>
+
+<footer>
+  <p>Sadaq Taxi</p>
+  <p>📍 Сарайшык 32/1 | 📞 77075111104</p>
+</footer>
+
+<script>
+function sendWhatsApp() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let city = document.getElementById("city").value;
+  let text = `Заявка водитель:%0AИмя: ${name}%0AТелефон: ${phone}%0AГород: ${city}`;
+  window.open(`https://wa.me/77075111104?text=${text}`, '_blank');
+}
+
+function setLang(lang) {
+  document.querySelectorAll("[data-ru]").forEach(el => {
+    el.innerText = el.getAttribute(`data-${lang}`);
+  });
+}
+</script>
+
+</body>
+</html>
